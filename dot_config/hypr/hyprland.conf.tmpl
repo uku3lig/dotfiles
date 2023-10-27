@@ -1,21 +1,29 @@
 # See https://wiki.hyprland.org/Configuring/Monitors/
 # monitor=name,resolution,position,scale
+{{- if eq .chezmoi.hostname "fuji" }}
+monitor=DP-1,1920x1200@60,0x0,1
+monitor=HDMI-A-1,1440x900@60,1920x300,1
+{{- else }}
 monitor=,highres,auto,1
+{{- end }}
 
 # See https://wiki.hyprland.org/Configuring/Keywords/ for more
 env = WLR_DRM_NO_ATOMIC,1
 env = SDL_VIDEODRIVER,wayland
 env = MOZ_ENABLE_WAYLAND,1
 
+{{- if .nvidia }}
+
 # NVIDIAAAAAAAAAAAAA
-# env = LIBVA_DRIVER_NAME,nvidia
-# env = XDG_SESSION_TYPE,wayland
-# env = GBM_BACKEND,nvidia-drm
-# env = __GLX_VENDOR_LIBRARY_NAME,nvidia
-# env = WLR_NO_HARDWARE_CURSORS,1
-# env = __EGL_VENDOR_LIBRARY_FILENAMES,/usr/share/glvnd/egl_vendor.d/10_nvidia.json
-# env = NVD_BACKEND,direct
-# env = MOZ_DISABLE_RDD_SANDBOX,1
+env = LIBVA_DRIVER_NAME,nvidia
+env = XDG_SESSION_TYPE,wayland
+env = GBM_BACKEND,nvidia-drm
+env = __GLX_VENDOR_LIBRARY_NAME,nvidia
+env = WLR_NO_HARDWARE_CURSORS,1
+env = __EGL_VENDOR_LIBRARY_FILENAMES,/usr/share/glvnd/egl_vendor.d/10_nvidia.json
+env = NVD_BACKEND,direct
+env = MOZ_DISABLE_RDD_SANDBOX,1
+{{- end }}
 
 # Execute your favorite apps at launch
 # exec-once = waybar & hyprpaper & firefox

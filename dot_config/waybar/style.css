@@ -53,6 +53,7 @@ button:hover {
 #clock,
 #battery,
 #cpu,
+#custom-gpu-usage,
 #memory,
 #disk,
 #temperature,
@@ -102,6 +103,10 @@ label:focus {
 }
 
 #cpu {
+    background-color: @sapphire;
+}
+
+#custom-gpu-usage {
     background-color: @blue;
 }
 
@@ -228,5 +233,5 @@ label:focus {
 }
 
 #scratchpad.empty {
-	background-color: transparent;
+    background-color: transparent;
 }

@@ -42,7 +42,11 @@ height = 20pt
 
 ; modules
 modules-left = xworkspaces
+{{- if .laptop }}
 modules-right = memory cpu pulseaudio battery backlight date
+{{- else }}
+modules-right = memory cpu pulseaudio date
+{{- end }}
 
 background = ${colors.background}
 foreground = ${colors.foreground}
