@@ -46,6 +46,8 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # Use playerctl to play-pause media
+bindsym XF86AudioPause exec --no-startup-id playerctl play-pause
+bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
 bindsym Mod4+Shift+S exec --no-startup-id playerctl play-pause
 
 # Use xbacklight to change backlight
