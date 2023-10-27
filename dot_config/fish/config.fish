@@ -9,7 +9,6 @@ if status is-login
 end
 
 set -x PATH $HOME/.cargo/bin $HOME/.local/bin $PATH
-
-EDITOR=nvim
+set -x EDITOR nvim
 
 starship init fish | source
