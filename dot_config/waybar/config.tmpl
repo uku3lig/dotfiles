@@ -7,7 +7,7 @@
     "modules-left": ["hyprland/workspaces"],
     "modules-center": [],
     {{- if .laptop }}
-    "modules-right": ["memory", "cpu", "pulseaudio", "battery", "backlight", "clock", "tray"]
+    "modules-right": ["memory", "cpu", "pulseaudio", "battery", "backlight", "clock", "tray"],
     {{- else }}
     "modules-right": ["memory", {{ if not .nvidia }}"custom/gpu-usage", {{ end }}"cpu", "pulseaudio", "clock", "tray"],
     {{- end }}
