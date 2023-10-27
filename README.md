@@ -6,7 +6,7 @@ currently using hyprland, i3 & polybar configs are very likely out of date
 
 ![hyprland screenshot](https://uku.s-ul.eu/9yBtHNfJ)
 
-## usage
+## installation
 
 ### chezmoi (recommended)
 
@@ -29,3 +29,13 @@ refer to the [chezmoi documentation](https://www.chezmoi.io/) for more help and 
 *you like suffering don't you*
 
 this repo is managed by chezmoi to be used with chezmoi. if you really don't want to use it, you can always clone it and replace the `dot_` in every name with a period and then copy/symlink everything over, have fun.
+
+## usage (important !!!!)
+
+create `~/.config/chezmoi/chezmoi.toml` using the following template and edit it to your heart's content! (warning: chezmoi will not work without this file)
+
+```toml
+[data]
+laptop = false # change to true for laptop usage
+nvidia = true # change to false if you're not on nvidia
+```
