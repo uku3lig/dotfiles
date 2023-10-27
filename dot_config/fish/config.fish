@@ -1,5 +1,5 @@
 function fish_greeting
-    nofetch
+    # nofetch
 end
 
 if status is-login
@@ -8,9 +8,8 @@ if status is-login
     end
 end
 
-set -x PATH $HOME/.cargo/bin /home/leo/.local/bin $PATH
+set -x PATH $HOME/.cargo/bin $HOME/.local/bin $PATH
 
-alias vim="nvim"
+EDITOR=nvim
 
 starship init fish | source
-thefuck --alias | source
