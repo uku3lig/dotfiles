@@ -28,6 +28,9 @@ env = MOZ_DISABLE_RDD_SANDBOX,1
 # Execute your favorite apps at launch
 # exec-once = waybar & hyprpaper & firefox
 exec-once = hyprpaper & waybar & swayidle -w
+{{- if .laptop }}
+exec-once = nm-applet
+{{- end }}
 exec-once = /usr/lib/polkit-kde-authentication-agent-1
 exec-once = wl-paste --type text --watch cliphist store
 exec-once = wl-paste --type image --watch cliphist store
