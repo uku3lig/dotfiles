@@ -29,7 +29,7 @@ env = MOZ_DISABLE_RDD_SANDBOX,1
 # exec-once = waybar & hyprpaper & firefox
 exec-once = hyprpaper & waybar & swayidle -w
 {{- if .laptop }}
-exec-once = nm-applet
+exec-once = nm-applet & blueman-applet
 {{- end }}
 exec-once = /usr/lib/polkit-kde-authentication-agent-1
 exec-once = wl-paste --type text --watch cliphist store
