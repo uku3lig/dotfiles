@@ -140,7 +140,7 @@ bind = ,XF86MonBrightnessUp, exec, light -A 5
 bind = ,XF86MonBrightnessDown, exec, light -U 5
 
 # flameshot
-bind = ,Print, exec, grimblast --freeze copy area
+bind = ,Print, exec, grimblast --freeze save area - | swappy -f -
 # bind = ,Print, exec, grim -g "$(slurp -c 00000000)" - | swappy -f -
 bind = SHIFT, Print, exec, grim - | swappy -f -
 
