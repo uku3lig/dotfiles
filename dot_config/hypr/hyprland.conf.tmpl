@@ -21,7 +21,11 @@ env = XDG_SESSION_TYPE,wayland
 env = GBM_BACKEND,nvidia-drm
 env = __GLX_VENDOR_LIBRARY_NAME,nvidia
 env = WLR_NO_HARDWARE_CURSORS,1
+{{- if eq .chezmoi.osRelease.id "nixos" }}
+env = __EGL_VENDOR_LIBRARY_FILENAMES,/run/opengl-driver/share/glvnd/egl_vendor.d/10_nvidia.json
+{{- else }}
 env = __EGL_VENDOR_LIBRARY_FILENAMES,/usr/share/glvnd/egl_vendor.d/10_nvidia.json
+{{- end }}
 env = NVD_BACKEND,direct
 env = MOZ_DISABLE_RDD_SANDBOX,1
 {{- end }}
