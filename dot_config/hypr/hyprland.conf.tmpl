@@ -28,6 +28,8 @@ env = __EGL_VENDOR_LIBRARY_FILENAMES,/usr/share/glvnd/egl_vendor.d/10_nvidia.jso
 {{- end }}
 env = NVD_BACKEND,direct
 env = MOZ_DISABLE_RDD_SANDBOX,1
+{{- else if eq .chezmoi.osRelease.id "nixos" }}
+env = NIXOS_OZONE_WL,1
 {{- end }}
 
 # Execute your favorite apps at launch
