@@ -90,7 +90,7 @@ animations {
 
 dwindle {
     # See https://wiki.hyprland.org/Configuring/Dwindle-Layout/ for more
-    pseudotile = true # master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
+    pseudotile = true # master switch for pseudotiling. Enabling is bound to mod + P in the keybinds section below
     preserve_split = true # you probably want this
     force_split = 2
 }
@@ -119,18 +119,18 @@ windowrulev2 = immediate, class:^(steam_app_1229490)$ # ultrakill
 # windowrulev2 = immediate, class:^(steam_app_322170)$
 
 # See https://wiki.hyprland.org/Configuring/Keywords/ for more
-$mainMod = SUPER
+$mod = SUPER
 
 # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
-bind = $mainMod, Return, exec, kitty
-bind = $mainMod SHIFT, A, killactive,
-bind = $mainMod SHIFT, E, exit,
-bind = $mainMod SHIFT, Space, togglefloating,
-bind = $mainMod, D, exec, rofi -modi drun,run -show drun
+bind = $mod, Return, exec, kitty
+bind = $mod SHIFT, A, killactive,
+bind = $mod SHIFT, E, exit,
+bind = $mod SHIFT, Space, togglefloating,
+bind = $mod, D, exec, rofi -modi drun,run -show drun
 bind = SUPER, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy
-bind = $mainMod, F, fullscreen, 0
-bind = $mainMod, P, pseudo, # dwindle
-bind = $mainMod, J, togglesplit, # dwindle
+bind = $mod, F, fullscreen, 0
+bind = $mod, P, pseudo, # dwindle
+bind = $mod, J, togglesplit, # dwindle
 
 # audio
 bind = ,XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
@@ -152,57 +152,57 @@ bind = ,Print, exec, grimblast --cursor --freeze save area - | swappy -f -
 bind = SHIFT, Print, exec, grim - | swappy -f -
 
 # Move focus
-bind = $mainMod, j, movefocus, l
-bind = $mainMod, k, movefocus, d
-bind = $mainMod, l, movefocus, u
-bind = $mainMod, m, movefocus, r
+bind = $mod, j, movefocus, l
+bind = $mod, k, movefocus, d
+bind = $mod, l, movefocus, u
+bind = $mod, m, movefocus, r
 
-# Move focus with mainMod + arrow keys
-bind = $mainMod, left, movefocus, l
-bind = $mainMod, right, movefocus, r
-bind = $mainMod, up, movefocus, u
-bind = $mainMod, down, movefocus, d
+# Move focus with mod + arrow keys
+bind = $mod, left, movefocus, l
+bind = $mod, right, movefocus, r
+bind = $mod, up, movefocus, u
+bind = $mod, down, movefocus, d
 
 # Move windows
-bind = $mainMod SHIFT, j, movewindow, l
-bind = $mainMod SHIFT, k, movewindow, d
-bind = $mainMod SHIFT, l, movewindow, u
-bind = $mainMod SHIFT, m, movewindow, r
+bind = $mod SHIFT, j, movewindow, l
+bind = $mod SHIFT, k, movewindow, d
+bind = $mod SHIFT, l, movewindow, u
+bind = $mod SHIFT, m, movewindow, r
 
 # Move windows with arrow keys
-bind = $mainMod SHIFT, left, movewindow, l
-bind = $mainMod SHIFT, down, movewindow, d
-bind = $mainMod SHIFT, up, movewindow, u
-bind = $mainMod SHIFT, right, movewindow, r
+bind = $mod SHIFT, left, movewindow, l
+bind = $mod SHIFT, down, movewindow, d
+bind = $mod SHIFT, up, movewindow, u
+bind = $mod SHIFT, right, movewindow, r
 
-# Switch workspaces with mainMod + [0-9]
-bind = $mainMod, ampersand, workspace, 1
-bind = $mainMod, eacute, workspace, 2
-bind = $mainMod, quotedbl, workspace, 3
-bind = $mainMod, apostrophe, workspace, 4
-bind = $mainMod, parenleft, workspace, 5
-bind = $mainMod, minus, workspace, 6
-bind = $mainMod, egrave, workspace, 7
-bind = $mainMod, underscore, workspace, 8
-bind = $mainMod, ccedilla, workspace, 9
-bind = $mainMod, agrave, workspace, 10
+# Switch workspaces with mod + [0-9]
+bind = $mod, ampersand, workspace, 1
+bind = $mod, eacute, workspace, 2
+bind = $mod, quotedbl, workspace, 3
+bind = $mod, apostrophe, workspace, 4
+bind = $mod, parenleft, workspace, 5
+bind = $mod, minus, workspace, 6
+bind = $mod, egrave, workspace, 7
+bind = $mod, underscore, workspace, 8
+bind = $mod, ccedilla, workspace, 9
+bind = $mod, agrave, workspace, 10
 
-# Move active window to a workspace with mainMod + SHIFT + [0-9]
-bind = $mainMod SHIFT, ampersand, movetoworkspacesilent, 1
-bind = $mainMod SHIFT, eacute, movetoworkspacesilent, 2
-bind = $mainMod SHIFT, quotedbl, movetoworkspacesilent, 3
-bind = $mainMod SHIFT, apostrophe, movetoworkspacesilent, 4
-bind = $mainMod SHIFT, parenleft, movetoworkspacesilent, 5
-bind = $mainMod SHIFT, minus, movetoworkspacesilent, 6
-bind = $mainMod SHIFT, egrave, movetoworkspacesilent, 7
-bind = $mainMod SHIFT, underscore, movetoworkspacesilent, 8
-bind = $mainMod SHIFT, ccedilla, movetoworkspacesilent, 9
-bind = $mainMod SHIFT, agrave, movetoworkspacesilent, 10
+# Move active window to a workspace with mod + SHIFT + [0-9]
+bind = $mod SHIFT, ampersand, movetoworkspacesilent, 1
+bind = $mod SHIFT, eacute, movetoworkspacesilent, 2
+bind = $mod SHIFT, quotedbl, movetoworkspacesilent, 3
+bind = $mod SHIFT, apostrophe, movetoworkspacesilent, 4
+bind = $mod SHIFT, parenleft, movetoworkspacesilent, 5
+bind = $mod SHIFT, minus, movetoworkspacesilent, 6
+bind = $mod SHIFT, egrave, movetoworkspacesilent, 7
+bind = $mod SHIFT, underscore, movetoworkspacesilent, 8
+bind = $mod SHIFT, ccedilla, movetoworkspacesilent, 9
+bind = $mod SHIFT, agrave, movetoworkspacesilent, 10
 
-# Scroll through existing workspaces with mainMod + scroll
-bind = $mainMod, mouse_down, workspace, e+1
-bind = $mainMod, mouse_up, workspace, e-1
+# Scroll through existing workspaces with mod + scroll
+bind = $mod, mouse_down, workspace, e+1
+bind = $mod, mouse_up, workspace, e-1
 
-# Move/resize windows with mainMod + LMB/RMB and dragging
-bindm = $mainMod, mouse:272, movewindow
-bindm = $mainMod, mouse:273, resizewindow
+# Move/resize windows with mod + LMB/RMB and dragging
+bindm = $mod, mouse:272, movewindow
+bindm = $mod, mouse:273, resizewindow
