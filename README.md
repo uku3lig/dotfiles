@@ -1,5 +1,8 @@
 # uku's dotfiles
 
+> [!WARNING]  
+> this repo has been deprecated in favor of a home-manager based approach, that you can find at [uku3lig/flake](https://github.com/uku3lig/flake)
+
 very minimalist, i don't like my desktop cluttered
 
 currently using hyprland, i3 & polybar configs are very likely out of date
